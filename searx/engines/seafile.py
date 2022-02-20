@@ -7,7 +7,7 @@ from json import loads, dumps
 from searx.exceptions import SearxEngineAPIException
 from datetime import datetime
 
-base_url = 'http://localhost:9200'
+base_url = 'http://elasticsearch:9200'
 index = 'repofiles'
 search_url = f"{base_url}/{index}/_search"
 result_url = 'https://localhost'
