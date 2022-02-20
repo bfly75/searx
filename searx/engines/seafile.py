@@ -9,7 +9,7 @@ from datetime import datetime
 
 base_url = 'http://localhost:9200'
 index = 'repofiles'
-search_url = f'{base_url}/{index}/_search}'
+search_url = f"{base_url}/{index}/_search}"
 result_url = 'https://localhost'
 categories = ['general']
 
@@ -57,7 +57,7 @@ def response(resp):
     for result in resp_json['hits']['hits']:
         #TODO RC: what to do with folders?
         if result['_type'] == "file":
-            url = f'{result_url}/lib/{result['_id']}'
+            url = f"{result_url}/lib/{result['_id']}"
             title = result['_source']['filename']
             content = result['_source']['content']
             # According to /templates/simple/macros.html publishedDate is written as part of the subheader.
